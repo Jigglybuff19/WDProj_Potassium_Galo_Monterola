@@ -41,3 +41,5 @@ Outline:
     - Nightmare gives 100, 000, 000 points 
     - Maximum points you can win: 200,000,000
 
+Wireframe:
+https://www.canva.com/design/DAG3FpHdF5k/DIi7c7ofeCYRVme81K1xng/edit?utm_content=DAG3FpHdF5k&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton 
