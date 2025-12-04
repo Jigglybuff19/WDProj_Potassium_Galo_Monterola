@@ -11,8 +11,8 @@ Outline:
     - Header
     - Title 
     - Our logo, Mjolnir will be in the middle of the screen waiting to be clicked
-    - Footer with copyright notices, social media handles,and a link to all our references
-    - Hovering over the Mjonlir button will show a text box saying "Are you worthy?". CLicking the button will take you to the second webpage with the list of games. 
+    - Footer with copyright notices, social media handles, and a link to all our references
+    - Hovering over the Mjonlir button will show a text box saying "Are you worthy?". Clicking the button will take you to the second webpage with the list of games. 
     - Score goal: , 299,792,458, 
     - All the webpages of the games will have a link back to the homepage and the navigation bar.
 
@@ -20,7 +20,7 @@ Outline:
     - Navigation bar with all the links to the games and back to the homepage
 
     3rd Webpage (Odin's Knowledge): 
-    - 1st game: Trivia about Thor as an overall character and fun facts about     Norse mythology.
+    - 1st game: Trivia about Thor as an overall character and fun facts about Norse mythology.
     - 25 questions, some are multiple choice, some are true or false, while others are fill in the blank.
     - Max points you can win: 100,000,000
     - Minimum points: 60,000,000
