@@ -4,7 +4,30 @@
 <header>
     <h1> HEADER </h1>
 </header>
-<body id = "BGI" style = "background-image: url(Images/Yggdrasil.jpg);"> 
+<body id = "BGI" style = "background-image: url('images/Yggdrasil.webp');"> 
+    <div class="card-holder">
+        <div class="card">
+            <img src="images/Odin.jpg">
+            <div class="card-info">
+                <h1> Odin's Knowledge </h1>
+                <a href="" class="card-button"> </a>
+            </div>
+        </div>
+     <div class="card">
+            <img src="images/Loki.jpg">
+            <div class="card-info">
+                <h1> Loki's Mindgames </h1>
+                <a href="" class="card-button"> </a>
+            </div>
+        </div>
+     <div class="card">
+            <img src="images/Thor.png">
+            <div class="card-info">
+                <h1> Thor's Thunder </h1>
+                <a href="" class="card-button"> </a>
+            </div>
+        </div>
+    </div>
 </body>
 <footer>
 
@@ -12,10 +35,53 @@
 <style>
 
 #BGI{
-    
     background-repeat: no-repeat;
     background-size: cover;
-    opacity: 0.5;
+}
+
+div.card-holder{
+    margin:0px;
+    padding:0px;
+    box-sizing: border-box;
+    font-family: sans-serif;
+    display: flex;
+    justify-content:center;
+    flex-wrap: wrap;
+    gap:25px;
+    margin-top:100px;
+
+}
+.card{
+    width:325px;
+    background-color:antiquewhite;
+    border-radius:10px;
+    box-shadow: 0px 2px 4px rgba(0,0,0,0,0.3);
+    overflow: hidden;
+}
+
+.card:hover{
+    transform: scale(1.05);
+    transition: all 0.3s ease;
+}
+
+.card img{
+    width:100%;
+    height:auto;
+    object-fit: cover;
+}
+
+.card-info{
+    padding:20px;
+}
+.card-info h1{
+    font-size:20px;
+    margin-bottom: 10px;
+    text-decoration: solid;
+}
+
+.card-button{
+    display: inline-block;
+    background-color: aqua;
 }
 </style>
 </html>
