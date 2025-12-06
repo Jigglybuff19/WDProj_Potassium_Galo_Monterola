@@ -61,3 +61,17 @@ p {
     left: 0;
     border-radius: 10px;
 }
+.card.front {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: rotateY(180deg);
+}
+.card.back {
+    background-image: url(Projects/Webpages/Images/Lokisymbol.jpg);
+    background-position: center center;
+    background-size: cover;
+    backface-visibility: hidden;
+
+
+}
