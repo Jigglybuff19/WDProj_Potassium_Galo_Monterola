@@ -60,7 +60,7 @@ function checkAnswer(selectedOption) {
 
   // Check if the selected answer is correct
   if (selectedOption === currentQuestion.correctAnswer) {
-    score++;
+    score+=4000000;
   }
 
   // Move to the next question or end the quiz if all questions are answered
