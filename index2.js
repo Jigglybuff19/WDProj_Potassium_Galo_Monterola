@@ -10,10 +10,37 @@ const quizQuestions = [
     correctAnswer: "False"
   },
   {
-    question: "What is the chemical symbol for gold?",
-    options: ["Au", "Ag", "Cu", "Fe"],
-    correctAnswer: "Au"
+    question: "What is the name of the Squirrel on Yggdrasil Tree?",
+    correctAnswer: "Ratatoskr","ratatoskr" 
+    },
+  {
+    question: "Thor dies by being poisoned by a serpent",
+    options: ["True","False"],
+    correctAnswer: "True"
+  },
+  {
+    question: "What is the name of Thor's hammer?",
+    correctAnswer: "Mjolnir","mjolnir" },
+  {
+    question: "Who created Thor's Hammer?",
+    options: ["Volundr","Thor","Odin","Brokkr and Sindri"],
+    correctAnswer: "Brokkr and Sindri"
+  },
+  {
+    question: "Who survives Ragnarok?",
+    options: ["Odin","Vidar","Tyr","Baldr"],
+    correctAnswer: "Vidar"
+  },
+  {
+    question: "What is name of Loki's two sons?(Put a comma and then space between the names)",
+    correctAnswer: "Fenrir, Narfi","fenrir,narfi"},
+  {
+    question: "How does Baldur die?",
+    options: ["Eaten by Fenrir","Burned by Loki","Hit with Mistletoe","Accidentally hit by Mjolnir"],
+    correctAnswer: "Hit with Mistletoe"
   }
+
+
 ];
 
 // Variables to track quiz state
