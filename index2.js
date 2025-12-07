@@ -76,7 +76,7 @@ function checkAnswer(selectedOption) {
 // Function to start the time
 
 // Function to end the quiz
-function endQuiz() {
+function endQuiz() {  
   // Stop the timer
 
   // Calculate the score percentage
@@ -85,10 +85,9 @@ function endQuiz() {
   // Display the final score
   const questionContainer = document.getElementById("question-container");
   questionContainer.innerHTML = `
-    <h2>Quiz Completed!</h2>
-    <p>Your Score: ${score} out of ${quizQuestions.length}</p>
-    <p>Score Percentage: ${scorePercentage}%</p>
-  `;
+    <h2> Completed!</h2>
+    <p>Your Score: ${score}</p>
+    `;
 }
 
 // Add event listener to start the quiz when the start button is clicked
