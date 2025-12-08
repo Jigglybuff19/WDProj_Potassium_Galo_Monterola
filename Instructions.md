@@ -18,3 +18,27 @@ The project proposal containing above information should be saved as a readme.md
 
 The project team name should be WDProjSectionLastNames.  
 The Github project repository link should be submitted in KHub to give your teacher access to your files.
+
+Q2 WEBSITE
+All files should be inside your Github project repository following the directory below.
+public\ (for html files, css and client side .js files) 
+assets\ (for images and other media files)
+index.html 
+
+All pertinent meta tags and titles should be included IN EACH of the web pages. '
+
+Your website should carry a favicon/site icon displayed every time on the browser tab AND on each page of the website. 
+
+Pertinent Comments should also be incorporated in all files, especially your JS file 
+Source Citations using APA format should be incorporated as well and client/user facing on the footer section per page. 
+
+A simple JS that is appropriate to the website or to the webpage that carries it. Please indicate/write in the submission text editor or comment section, the web page that uses it and how it was used. 
+Use of images and media files are required. 
+
+Most of the CSS and JS should be inside external files. 
+
+Each web page should have AT LEAST two paragraphs, while images/media components should have at a very least captions attached to them. 
+
+For more details and how to grade your project, please refer to the Rubrics
+Submit the links for both your Github repository and the live server link.  Submission with no live server link WILL NOT BE CHECKED.
+Late submissions will have corresponding score ceiling of either 80% OR 60%.
