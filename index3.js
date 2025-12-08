@@ -65,7 +65,7 @@ function catchBug() {
 }
 
 function addBugs() {
-    setTimeout(createBug, 1000)
+    setTimeout(createBug, 100000)
    
 }
 function increaseScore() {
