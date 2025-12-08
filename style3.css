@@ -5,13 +5,14 @@
 }
 
 body {
-  background-color: #516dff;
+  background-color: green;
+  background-image: url("Images/Background2.png");
   color: #fff;
   font-family: 'Press Start 2P', sans-serif;
   height: 100vh;
-  overflow: hidden;
-  margin: 0;
   text-align: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 a {
@@ -144,6 +145,6 @@ h1 {
 }
 
 .bug img {
-  width: 100px;
-  height: 100px;
+  width: 500px;
+  height: 500px;
 }
