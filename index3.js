@@ -66,10 +66,8 @@ function catchBug() {
 
 function addBugs() {
     setTimeout(createBug, 1000)
-    setTimeout(createBug, 1500)
-
+   
 }
-
 function increaseScore() {
     score++
     if(score > 19) {
