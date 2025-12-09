@@ -101,3 +101,8 @@ h1{
 #reset-btn:hover{
 	background-color: #00a67c
 }
+a{
+	position: absolute;
+	bottom: 20px;
+	right: 20px;
+}

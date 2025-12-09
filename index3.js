@@ -5,7 +5,7 @@ const game_container = document.getElementById('game-container')
 const timeElem = document.getElementById('time')
 const scoreElem = document.getElementById('score')
 const message = document.getElementById('message')
-let seconds = 0
+let seconds = 90
 let score = 0
 let selected_bug = {}
 
@@ -33,7 +33,7 @@ function increaseTime() {
     m = m < 10 ? `0${m}` : m
     s = s < 10 ? `0${s}` : s
     timeElem.innerHTML = `Time: ${m}:${s}`
-    seconds++
+    seconds--
 }
 
 function createBug() {

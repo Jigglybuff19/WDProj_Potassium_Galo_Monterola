@@ -98,6 +98,7 @@ h1 {
 .time,
 .score {
   position: absolute;
+  left: 20px;
   top: 20px;
 }
 
@@ -147,4 +148,9 @@ h1 {
 .bug img {
   width: 500px;
   height: 500px;
+}
+a{
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
 }
