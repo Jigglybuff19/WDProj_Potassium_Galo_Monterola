@@ -196,7 +196,7 @@ function checkAnswer(selectedOption) {
   const questionContainer = document.getElementById("question-container");
   questionContainer.innerHTML = `
     <h2> Completed!</h2>
-    <p>Your Score: ${score}</p>
+    <p> Your Final Score is: ${score.toLocaleString("en-US")} </p>
     <p> Maximum Score: 100,000,000</p>
     `;
   }
