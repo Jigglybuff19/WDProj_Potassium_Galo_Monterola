@@ -11,7 +11,13 @@
     - We will use html forms for inputs in our games and local storage to keep track of scores
     - There is a target score in each game that the player must reach to "win" the game. However, they can still continue to play for higher scores. 
 
-
+## Definition of Done
+    - All games are fully functional and stay playable on both phones and laptops
+    - The games automatically keeps tracks of the scores and once the player reaches it, it notifies them that they are worthy of Thor's Hammer: Mjolnir.
+    - The navigation transitions and animations work smoothly throughout the entire website
+    - The game is enjoyable to the user and pulls them in with replayability factor
+    - All references and footer links are included and work properly
+    - All webpages are designed neatly and is visually appealing.
 
 --- 
 Title: Are You Worthy of Thors Hammer?
