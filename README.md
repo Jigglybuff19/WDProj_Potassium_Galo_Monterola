@@ -1,3 +1,19 @@
+# Q3 Proposal Update
+## Final Title: Are You Worthy of Thor's Hammer?
+## Features 
+    - Works on phones and laptops
+    - Transitions and simple animations 
+    - Games that use local storage to scores 
+    - Target score is included and once reached, the player will be able to interact with    the hammer (may or may not have cutscene)
+    - Popups for instructions and footers that contain references and social media links
+
+## Details (project specific)
+    - We will use html forms for inputs in our games and local storage to keep track of scores
+    - There is a target score in each game that the player must reach to "win" the game. However, they can still continue to play for higher scores. 
+
+
+
+--- 
 Title: Are You Worthy of Thors Hammer?
 Secondary: Games to prove your skills to the Gods. 
 Logo: C:\Users\user\CS3__2ndQuarter_Potassium_CN13_C23\Projects\Images\pixil-frame-0.png
