@@ -17,19 +17,26 @@
         <div class="card">
             <img src="Images/Odin.jpg">
             <div class="card-info">
-                <a href="OdinsWisdom.html"> Odin's Knowledge </a>
+                 <a href="OdinsWisdom.html" class="button-link"> Odin's Knowledge </a>
+                  <button popovertarget="info">How to play</button>
+                <div id="info" popover>
+                    <h1>Odin's Knowledge:</h1>
+                    <p> In this game, you will answer trivia questions regarding Thor and also Norse Mythology.
+
+                    </p>
+                        </div>
             </div>
         </div>
      <div class="card">
             <img src="Images/Loki.jpg">
             <div class="card-info">
-            <a href="LokisMindgames.html">Loki's Mindgames </a>
+            <a href="LokisMindgames.html" class="button-link">Loki's Mindgames </a>
             </div>
         </div>
      <div class="card">
             <img src="Images/Thor.png">
             <div class="card-info">
-                <a href="ThorsThunder.html">Thors Thunder</a> </a>
+                <a href="ThorsThunder.html" class="button-link">Thor's Thunder</a> 
             </div>
         </div>
     </div>
@@ -39,6 +46,7 @@
 
 </footer>
 <style>
+ @import url('https://fonts.googleapis.com/css?family=Press+Start+2P&display=swap');
 
 #BGI{
     background-size: cover;
@@ -79,6 +87,7 @@ div.card-holder{
 
 .card-info{
     padding:20px;
+    font-family: 'Press Start 2P';
 }
 .card-info h1{
     font-size:20px;
@@ -95,6 +104,20 @@ div.card-holder{
     position: absolute;
     bottom: 20px;
     right: 20px;
+    
+}
+.button-link {
+    font-family: 'Press Start 2P', sans-serif;
+    background-color: #04aa6d;
+    color: white;
+    border-radius: 10%;
+
+}
+button{
+    font-family: 'Press Start 2P', sans-serif;
+    background-color: #f44336;
+    color: white;
+    border-radius: 10%;
 }
 
 </style>
