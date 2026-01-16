@@ -124,10 +124,7 @@ h1 {
   transition: transform 0.4s ease-in;
 }
 
-.message.visible {
-  transform: translate(-50%, 150%);
-  opacity: 1;
-}
+
 
 .bug {
   cursor: pointer;
@@ -153,4 +150,13 @@ a{
   position: absolute;
   bottom: 20px;
   right: 20px;
+}
+#Back{
+  font-family: 'Press Start 2P', sans-serif;
+  color: white;
+}
+#Back:hover{
+  color:blue;
+  background-color: transparent;
+  text-decoration: underline;
 }

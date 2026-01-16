@@ -69,9 +69,6 @@ function addBugs() {
    
 }
 function increaseScore() {
-    score++
-    if(score > 19) {
-        message.classList.add('visible')
-    }
+    score++;
     scoreElem.innerHTML = `Score: ${score}`
 }
