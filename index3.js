@@ -5,7 +5,12 @@ const game_container = document.getElementById('game-container')
 const timeElem = document.getElementById('time')
 const scoreElem = document.getElementById('score')
 const message = document.getElementById('message')
-let seconds = 90
+const gamemodes = {
+    Easy: { seconds: 120 },
+    Medium: { seconds: 90 },
+    Hard: { seconds: 60 },
+    Nightmare: { seconds: 30 }
+}
 let score = 0
 let selected_bug = {}
 
@@ -23,7 +28,22 @@ choose_bug_buttons.forEach(button => {
     })
 })
 
-function startGame() {
+document.getElementById("Easy").addEventListener("click", () => {
+    startGame("Easy");
+})
+document.getElementById("Medium").addEventListener("click", () => {
+    startGame("Medium");
+})
+document.getElementById("Hard").addEventListener("click", () => {
+    startGame("Hard");
+})
+document.getElementById("Nightmare").addEventListener("click", () => {
+    startGame("Nightmare");
+})
+
+
+function startGame(gamemode) {
+    seconds = gamemodes[gamemode].seconds
     setInterval(increaseTime, 1000)
 }
 
@@ -34,6 +54,12 @@ function increaseTime() {
     s = s < 10 ? `0${s}` : s
     timeElem.innerHTML = `Time: ${m}:${s}`
     seconds--
+    if(m <= 0){
+        endgame()
+    }
+    if(s <= 0){
+        endgame()
+    }
 }
 
 function createBug() {
@@ -71,4 +97,11 @@ function addBugs() {
 function increaseScore() {
     score++;
     scoreElem.innerHTML = `Score: ${score}`
+}
+
+
+function endgame() {
+    clearInterval(increaseTime)
+    message.innerHTML = `Game Over! Your score is ${score}`
+    message.classList.add('visible')
 }

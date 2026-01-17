@@ -18,26 +18,26 @@
     <h1>Choose your difficulty</h1>
     <ul class="bug-list">
         <li>
-            <button class="choose-bug-button">
+            <button class="choose-bug-button" id="Easy">
                 <p>Easy</p>
                 <img src="Images/EasyLightning.png" alt="Easy">
             </button>
         </li>
          </li>
         <li>
-            <button class="choose-bug-button">
+            <button class="choose-bug-button" id="Medium">
                 <p>Medium</p>
                 <img src="Images/MedLightning-removebg-preview.png" alt="Medium">
             </button>
         </li>
         <li>
-            <button class="choose-bug-button">
+            <button class="choose-bug-button" id="Hard">
                 <p>Hard</p>
                 <img src="Images/HardLightning-removebg-preview.png" alt="Hard">
             </button>
         </li>
         <li>
-            <button class="choose-bug-button">
+            <button class="choose-bug-button" id="Nightmare">
                 <p>Nightmare</p>
                 <img src="Images/NightmareP2-Photoroom.png" alt="Nightmare">
             </button>
@@ -45,8 +45,12 @@
     </ul>
     </div>
     <div class="screen game-container" id="game-container">
-    <h3 id="time" class="time">Time: 01:30</h3>
+    <h3 id="time" class="time">Time: </h3>
     <h3 id="score" class="score">Score: 0</h3>
+    <h5 id="message" class="message">
+        Game Over! Your score is <span id="score"></span>
+    </h5>
+
     </div>
     <script src="index3.js"></script>
     <a href="Games.html" id="Back"> Back to home page</a>
