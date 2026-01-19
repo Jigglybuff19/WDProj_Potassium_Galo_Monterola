@@ -186,6 +186,7 @@ function checkAnswer(selectedOption) {
     endQuiz();
   }
 }
+
   function endQuiz() {  
   // Stop the timer
 
@@ -194,9 +195,11 @@ function checkAnswer(selectedOption) {
 
   // Display the final score
   const questionContainer = document.getElementById("question-container");
+
   questionContainer.innerHTML = `
     <h2> Completed!</h2>
-    <p> Your Final Score is: ${score.toLocaleString("en-US")} </p>
+    <p> Your Final Score is: ${score.toLocaleString("en-US")}</p>
+    <p> Your Highest Score is: ${highscore.toLocaleString("en-US")}</p>
     <p> Maximum Score: 100,000,000</p>
     `;
   }

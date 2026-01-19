@@ -3,7 +3,7 @@
 ## Features 
     - Works on phones and laptops
     - Transitions and simple animations 
-    - Games that use local storage to scores 
+    - Games that use local storage to score
     - Target score is included and once reached, the player will be able to interact with    the hammer (may or may not have cutscene)
     - Popups for instructions and footers that contain references and social media links
 
