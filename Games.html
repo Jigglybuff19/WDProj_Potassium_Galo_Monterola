@@ -19,6 +19,7 @@
         <div class="card" >
             <img src="Images/Odin.jpg">
             <div class="card-info">
+<<<<<<< HEAD
             <button id = "Odin" onclick ="location.href='OdinsWisdom.html'">Odin's Knowledge</button>
             </div>
         </div>
@@ -27,13 +28,49 @@
             <div class="card-info">
             <button onclick ="location.href='LokisMindgames.html'">Loki's Mindgames</button>
             
+=======
+                 <a href="OdinsWisdom.html" class="button-link"> Odin's Knowledge </a>
+                  <button popovertarget="info">How to play</button>
+                <div id="info" popover>
+                    <h1>Odin's Knowledge:</h1>
+                    <p> Quiz Game where you will answer trivia questions regarding Thor
+                        and Norse Mythology by selecting
+                        the correct answer through Multiple-choice and True or False questions.
+                    </p>
+                    <br>
+                    <p> Test your knowledge to see if it matches that of Odin.</p>
+                        </div>
+            </div>
+        </div>
+     <div class="card">
+            <img class="blur" src="Images/Loki.jpg">
+            <div class="card-info">
+            <h1> Loki's Mindgames</h1>
+            
+            <p> COMING SOON</p>
+
+>>>>>>> 6d4371350958724554986fd8cb488debb0499cf6
             </div>
         </div>
      <div class="card" id="Thor">
             <img src="Images/Thor.png">
             <div class="card-info">
+<<<<<<< HEAD
               <button onclick ="location.href='ThorsThunder.html'">Thor's Thunder</button>
               
+=======
+             <a href="ThorsThunder.html" class="button-link">Thor's Thunder</a> 
+            <button popovertarget="info2">How to play</button>
+            <div id="info2" popover>
+             <h1>Thor's Thunder:</h1>
+            <p> Reaction time/hand eye coordination game wherein you must click the lighting bolts that appear on the screen before the timer runs out.   </p>
+            <p> There are 4 modes of difficulty: Easy, Medium, Hard, and Nightmare.
+            <br>
+             Each mode increases speed and frequency of the lightning bolts. However,
+                each mode also decreases the time limit.
+            </p>
+            <p> Can you Handle the Thunder?</p>
+>>>>>>> 6d4371350958724554986fd8cb488debb0499cf6
             </div>
         </div>
     </div>
@@ -43,6 +80,7 @@
 
 </footer>
 <style>
+ @import url('https://fonts.googleapis.com/css?family=Press+Start+2P&display=swap');
 
 #BGI{
     background-size: cover;
@@ -81,8 +119,13 @@ div.card-holder{
     object-fit: cover;
 }
 
+.blur{
+    filter: blur(5px)
+}
+
 .card-info{
     padding:20px;
+    font-family: 'Press Start 2P';
 }
 .card-info h1{
     font-size:20px;
@@ -99,7 +142,30 @@ div.card-holder{
     position: absolute;
     bottom: 20px;
     right: 20px;
+    font-family: 'Press Start 2p', sans-serif;
+    color: white;
 }
+
+#Back:hover{
+  color:blue;
+  background-color: transparent;
+  text-decoration: underline;
+}
+.button-link {
+    font-family: 'Press Start 2P', sans-serif;
+    background-color: #04aa6d;
+    color: white;
+    border-radius: 10%;
+
+}
+button{
+    font-family: 'Press Start 2P', sans-serif;
+    background-color: #f44336;
+    color: white;
+    border-radius: 10%;
+}
+
+
 
 </style>
 </html>
