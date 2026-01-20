@@ -9,7 +9,7 @@ const gamemodes = {
     Easy: { seconds: 120 },
     Medium: { seconds: 90 },
     Hard: { seconds: 60 },
-    Nightmare: { seconds: 5  }
+    Nightmare: { seconds: 30  }
 }
 let score = 0
 let selected_bug = {}
@@ -53,12 +53,18 @@ function increaseTime() {
     m = m < 10 ? `0${m}` : m
     s = s < 10 ? `0${s}` : s
     timeElem.innerHTML = `Time: ${m}:${s}`
-    endgame()
-    seconds--
   
+    if(seconds <= 0){
+        stopGame();
+        return
+    }
+    seconds--
+
 }
 
 function createBug() {
+    if(seconds<=0) return;
+    
     const bug = document.createElement('div')
     bug.classList.add('bug')
     const { x, y } = getRandomLocation()
@@ -69,6 +75,8 @@ function createBug() {
     bug.addEventListener('click', catchBug)
 
     game_container.appendChild(bug)
+    
+
 }
 
 function getRandomLocation() {
@@ -87,19 +95,23 @@ function catchBug() {
 }
 
 function addBugs() {
-    setTimeout(createBug, 1)
-   
+    create = setTimeout(createBug, 1)
+
 }
+
 function increaseScore() {
     score++;
     scoreElem.innerHTML = `Score: ${score}`
 }
 
-
-function endgame() {
-    if(seconds == 0){
-    message.innerHTML = `Game Over! Your score is ${score}`
-    message.classList.add('visible')
-    }
+function stopGame(){
     
+    clearInterval(increaseTime);
+    clearTimeout(create);
+    message.innerHTML = `Game Over! Your score is <span id="score">${score}</span>`;
+    message.classList.add('visible');
+    
+
 }
+
+
