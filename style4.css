@@ -1,0 +1,18 @@
+ @import url('https://fonts.googleapis.com/css?family=Press+Start+2P&display=swap');
+ .title, .subtitle, .title.is-5, .label, #submitRun, #clearBoard, label{
+    font-family: 'Press Start 2P', sans-serif;
+    color: black;
+ }
+
+ p, .leaderboard, .input {
+    font-family: 'Press Start 2P', sans-serif;
+    font-size: small;
+    color:white
+ }
+
+#BG{
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    image-rendering: pixelated;
+}
