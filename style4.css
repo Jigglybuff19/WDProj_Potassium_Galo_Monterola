@@ -4,10 +4,15 @@
     color: black;
  }
 
- p, .leaderboard, .input {
+ p, .leaderboard {
     font-family: 'Press Start 2P', sans-serif;
     font-size: small;
     color:white
+ }
+ .input{
+    font-family: 'Press Start 2P', sans-serif;
+    font-size: small;
+    color: black;
  }
 
 #BG{
@@ -15,4 +20,19 @@
     background-size: cover;
     background-position: center;
     image-rendering: pixelated;
+}
+
+#Back{
+  font-family: 'Press Start 2P', sans-serif;
+  color: white ;
+}
+#Back:hover{
+  color:blue;
+  background-color: transparent;
+  text-decoration: underline;
+}
+a{
+	position: absolute;
+	bottom: 20px;
+	right: 20px;
 }

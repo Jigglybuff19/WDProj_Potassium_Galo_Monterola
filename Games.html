@@ -30,8 +30,9 @@
                     <br>
                     <p> Test your knowledge to see if it matches that of Odin.</p>
                         </div>
+             <a href="Leaderboards.html" class="button-link" id="leaderboard"> Leaderboards </a>
             </div>
-            <a href="Leaderboards.html" class="button-link"> Leaderboards </a>
+            
         </div>
      <div class="card">
             <img class="blur" src="Images/Loki.jpg">
@@ -46,9 +47,9 @@
             <img src="Images/pixil-frame-0_9.png">
             <div class="card-info">
 
-              <button onclick ="location.href='ThorsThunder.html'">Thor's Thunder</button>
+              <button onclick ="location.href='ThorsThunder.html'" class="button-link" >Thor's Thunder</button>
     
-             <a href="ThorsThunder.html" class="button-link">Thor's Thunder</a> 
+            
             <button popovertarget="info2">How to play</button>
             <div id="info2" popover>
              <h1>Thor's Thunder:</h1>
@@ -150,11 +151,22 @@ div.card-holder{
     border-radius: 10%;
 
 }
+
+img {
+    image-rendering: pixelated;
+}
+
+
 button{
     font-family: 'Press Start 2P', sans-serif;
     background-color: #f44336;
     color: white;
     border-radius: 10%;
+}
+#leaderboard{
+    margin-top: 10px;
+    background-color: blue;
+
 }
 
 

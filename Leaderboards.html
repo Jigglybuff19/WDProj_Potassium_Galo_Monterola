@@ -4,6 +4,7 @@
   <meta charset="utf-8" />
   <title>Odin's Knowledge Leaderboard</title>
   <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <link rel = "icon" type = "image/x-icon" href = "Images/pixil-frame-0.png">
   <link rel="stylesheet" href="style4.css" />
   <style>
     /* leaderboard accent */
@@ -106,7 +107,7 @@ function escapeHtml(s) {
       const board = loadBoard();
       board.push({ name, time: Number(time.toFixed(2)), at: Date.now() });
       // sort ascending by time (lower is better)
-      board.sort((a,b) => a.time - b.time);
+      board.sort((a,b) =>  b.time-a.time);
       // limit length
       if (board.length > MAX_ENTRIES) board.length = MAX_ENTRIES;
       saveBoard(board);
@@ -126,5 +127,6 @@ function escapeHtml(s) {
 
     document.addEventListener('DOMContentLoaded', renderBoard);
   </script>
+   <a href="Games.html" id="Back"> Back to home page</a>
 </body>
 </html>

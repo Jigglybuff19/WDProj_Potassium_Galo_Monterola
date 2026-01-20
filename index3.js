@@ -9,7 +9,7 @@ const gamemodes = {
     Easy: { seconds: 120 },
     Medium: { seconds: 90 },
     Hard: { seconds: 60 },
-    Nightmare: { seconds: 30 }
+    Nightmare: { seconds: 5  }
 }
 let score = 0
 let selected_bug = {}
@@ -53,13 +53,9 @@ function increaseTime() {
     m = m < 10 ? `0${m}` : m
     s = s < 10 ? `0${s}` : s
     timeElem.innerHTML = `Time: ${m}:${s}`
+    endgame()
     seconds--
-    if(m <= 0){
-        endgame()
-    }
-    if(s <= 0){
-        endgame()
-    }
+  
 }
 
 function createBug() {
@@ -101,7 +97,9 @@ function increaseScore() {
 
 
 function endgame() {
-    clearInterval(increaseTime)
+    if(seconds == 0){
     message.innerHTML = `Game Over! Your score is ${score}`
     message.classList.add('visible')
+    }
+    
 }
