@@ -121,18 +121,15 @@ const quizQuestions = [
   },
   {
     question: "What happened after Ragnarok?",
-    options: ["The world ends forever","A new world rises", "The giants take over","The valkyries rule the world"],
-    correctAnswer: "A new world rises"
+    options: ["The world ends forever","A new  World rises", "The giants take over","The valkyries rule the world"],
+    correctAnswer: "A new World rises"
   }
-
-
-
-
 ];
 
 // Variables to track quiz state
 let currentQuestionIndex = 0;
 let score = 0;
+
 
 // Function to start the quiz
 function startQuiz() {
@@ -199,7 +196,6 @@ function checkAnswer(selectedOption) {
   questionContainer.innerHTML = `
     <h2> Completed!</h2>
     <p> Your Final Score is: ${score.toLocaleString("en-US")}</p>
-    <p> Your Highest Score is: ${highscore.toLocaleString("en-US")}</p>
     <p> Maximum Score: 100,000,000</p>
     `;
   }

@@ -95,7 +95,7 @@ function catchBug() {
 }
 
 function addBugs() {
-    create = setTimeout(createBug, 1)
+    setTimeout(createBug, 1)
 
 }
 
@@ -107,7 +107,7 @@ function increaseScore() {
 function stopGame(){
     
     clearInterval(increaseTime);
-    clearTimeout(create);
+    clearTimeout(createBug);
     message.innerHTML = `Game Over! Your score is <span id="score">${score}</span>`;
     message.classList.add('visible');
     
