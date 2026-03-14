@@ -1,10 +1,21 @@
+# FINAL MODIFICATION PROPOSAL
+## Design and narrative
+Once you enter a game, for all games, before playing them, the user has to input their chosen player tag (username). The input will be used for the local storage to be saved and be displayed on the leaderboards. Once each game is over, the score you get will be automatically taken and stored in local storage. This is to implement Create and Read of the CRUD operations. Users will not have to manually type their scores to avoid cheating.  If the user inputs the same username as another one that is already saved, it will overwrite the previous score and show the current one. When you click the button “leaderboards”, it will send you to a new page that showcases and ranks all the scores that were saved. For each score on the list, there will a button that can remove it from the list, only if the user wants to and confirms to delete it. There is also the option to clear the leaderboard if all the players want to reset. This is how we will implement Update and Delete of the CRUD operations.
+
+On top of all this, there will a button for each game that if you press will check the most recently saved score of the player and compare it to a target score so they can be deemed worthy. Once the target is finally achieved, an animation will play about lifting the hammer.  
+## Updated Wireframe:
+https://www.canva.com/design/DAG3FpHdF5k/DIi7c7ofeCYRVme81K1xng/edit?utm_content=DAG3FpHdF5k&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton 
+
+
+
+
 # Q3 Proposal Update
 ## Final Title: Are You Worthy of Thor's Hammer?
 ## Features 
     - Works on phones and laptops
     - Transitions and simple animations 
     - Games that use local storage to score
-    - Target score is included and once reached, the player will be able to interact with    the hammer (may or may not have cutscene)
+    - Target score is included and once reached, the player will be able to interact with the hammer (may or may not have cutscene)
     - Popups for instructions and footers that contain references and social media links
 
 ## Details (project specific)
@@ -63,5 +74,3 @@ Outline:
     - Nightmare gives 100, 000, 000 points 
     - Maximum points you can win: 200,000,000
 
-Wireframe:
-https://www.canva.com/design/DAG3FpHdF5k/DIi7c7ofeCYRVme81K1xng/edit?utm_content=DAG3FpHdF5k&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton 
