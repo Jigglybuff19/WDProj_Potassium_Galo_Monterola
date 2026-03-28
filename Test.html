@@ -187,12 +187,12 @@
         }
 
         .modal-content {
-            background: #fff;
+            background: white;
             padding: 40px;
             border-radius: 30px;
             text-align: center;
-            box-shadow: 0 10px 0 #d4a574;
-            border: 6px solid #FF6B9D;
+            box-shadow: 0 10px 0 black;
+            border: 6px solid black;
             animation: bounce 0.5s;
         }
 
@@ -202,13 +202,13 @@
         }
 
         .modal-content h2 {
-            color: #FF6B9D;
+            color: darkgreen;
             font-size: 2.8em;
             margin-bottom: 20px;
         }
 
         .modal-content p {
-            color: #FFA07A;
+            color: black;
             font-size: 1.4em;
             margin-bottom: 30px;
             font-weight: bold;
@@ -301,20 +301,16 @@
 
     <script>
         // Image URLs from Unsplash - cute animals and nature
-        var Loki = 'https://cdn.discordapp.com/attachments/1418138384882339881/1446871809088557076/Lokisymbol.jpg?ex=69be0320&is=69bcb1a0&hm=dc0183a39fbbe0bc75072650a1b0771931e1ce4e6805453ce52eb37205b15901';
+        var Loki = 'Images/Lokisymbol.jpg';
         var images = [
-        'https://media.discordapp.net/attachments/1418138384882339881/1446863926401830932/Mjolnir-_Thor_s-Hammer_600x600.webp?ex=69c341c9&is=69c1f049&hm=38999e4afc6e78d01589a31f4def04c7250319895b7d5516179b08a589023850&=&format=webp',
-        'https://media.discordapp.net/attachments/1418138384882339881/1446864054944796752/Wolves-_Fenrir_93215a35-8681-4754-978c-fb39f436b90d_480x480.webp?ex=69c341e8&is=69c1f068&hm=d4f2b78c912ef26f67c8780bb0c47f214a53aabdecb8fe389035e659d2908b3d&=&format=webp',
-        'https://media.discordapp.net/attachments/1418138384882339881/1446864056412799068/Dragon-_Norse-Serpents_9c527c74-c3f1-4282-8dbe-d51c53d5c84b_600x600.jpg?ex=69c341e8&is=69c1f068&hm=835315e6213bf6dd2c8870683900ba718d9ae9318d2f200193259ae720dcbd99&=&format=webp',
-        'https://media.discordapp.net/attachments/1418138384882339881/1446864057226367189/LeggedHorse-_Sleipnir_600x600.webp?ex=69c341e8&is=69c1f068&hm=32c8f177699cc91c214c0cd175693aee59cacadf32a4a4bcaa337a807ad1ed79&=&format=webp',
-        'https://media.discordapp.net/attachments/1418138384882339881/1446864057863897360/Gungnir-_Odin_s-Spear_5349a8fe-9b44-4653-9616-f9beae884164_600x600.webp?ex=69c341e8&is=69c1f068&hm=a7b84489cc7997efa0f05cc6dc8820d355166689c1a4fa8eec308847e639206e&=&format=webp',
-        'https://media.discordapp.net/attachments/1418138384882339881/1446864058392252466/Viking-Axe-_Norse-Weapon_600x600.webp?ex=69c341e8&is=69c1f068&hm=9774a2cac532bbbe48606229c43561e01474448a1a6aace8cb9fe737aa600841&=&format=webp',
-        'https://media.discordapp.net/attachments/1418138384882339881/1446863926804611132/Yggdrasil-_Tree-of-Life_600x600.webp?ex=69c341c9&is=69c1f049&hm=064cc67363c3ecfb975d0dfe8a6a16853f892f91a7c17090c712e55d55b32de4&=&format=webp',
-        'https://media.discordapp.net/attachments/1418138384882339881/1446863927303602226/Valknut-_Knot-of-the-Slain_1d44b83f-8abd-44b7-bed3-1130b592ac6d_600x600.webp?ex=69c341c9&is=69c1f049&hm=0c17b26214724523fda5964e1685a7e7af8686e27f2d5c5819436cd89b476d5c&=&format=webp'      
-    
-          
-
-           
+        'Images/Mjolnir-_Thor_s-Hammer_600x600.webp',
+        'Images/Wolves-_Fenrir_93215a35-8681-4754-978c-fb39f436b90d_480x480.webp',
+        'Images/LeggedHorse-_Sleipnir_600x600.webp',
+        'Images/Gungnir-_Odin_s-Spear_5349a8fe-9b44-4653-9616-f9beae884164_600x600.webp',
+        'Images/Viking-Axe-_Norse-Weapon_600x600.webp',
+        'Images/Yggdrasil-_Tree-of-Life_600x600.webp',
+        'Images/Valknut-_Knot-of-the-Slain_1d44b83f-8abd-44b7-bed3-1130b592ac6d_600x600.webp',
+        'Images/Raven-_Hugin-and-Munin_e0337f82-fed6-4ee3-9859-9b36399f3484_600x600.webp'
         ];
 
         var firstCard = null;
@@ -343,7 +339,7 @@
             for (var i = 0; i < cardImages.length; i++) {
                 var card = document.createElement('div');
                 card.className = 'card';
-                card.innerHTML = '<div class="card-front"><img src="https://media.discordapp.net/attachments/1418138384882339881/1446871809088557076/Lokisymbol.jpg?ex=69c34920&is=69c1f7a0&hm=6b8fea0a75f5cdaedee25edd6a61b13a5c5d08ed9dabcbc5d18484090fc81a58&=&format=webp" style="width:100px; height:150px; border-radius:20px;"></i> </div>' +
+                card.innerHTML = '<div class="card-front"><img src="Images/Lokisymbol.jpg" style="width:100px; height:150px; border-radius:20px;"></i> </div>' +
                                 '<div class="card-back"><img src="' + cardImages[i] + '"></div>';
                 card.onclick = flipCard;
                 card.dataset.image = cardImages[i];
