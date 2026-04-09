@@ -14,9 +14,9 @@
 </header>
 <body id = "BGI" style = "background-image: url('Images/Yggdrasil.jpg');"> 
     <div class="card-holder">
-       
 
         <div class="card" >
+    
             <img src="Images/OdinHans.jpg">
             <div class="card-info">
                  <a href="OdinsWisdom.html" class="button-link"> Odin's Knowledge </a>
@@ -35,23 +35,33 @@
             
         </div>
      <div class="card">
-            <img class="blur" src="Images/Loki.jpg">
+        <div class = "electric-border">
+            <img src="Images/Loki.png">
             <div class="card-info">
-            <h1> Loki's Mindgames</h1>
-            
-            <p> COMING SOON</p>
+            <a href="Test.html" class="button-link"> Loki's Mindgames </a>
+                  <button popovertarget="info2">How to play</button>
+                <div id="info2" popover>
+                    <h1>Loki's Mindgames:</h1>
+                    <p> Memory card game where you must find and match pairs of cards.
+                    </p> 
+                    <br>
+                    <p> Will you be tricked by Loki?</p>
 
             </div>
+  
         </div>
+    </div>
+    </div>
      <div class="card" id="Thor">
+        <div class = "electric-border">
             <img src="Images/pixil-frame-0_9.png">
             <div class="card-info">
 
               <button onclick ="location.href='ThorsThunder.html'" class="button-link" >Thor's Thunder</button>
     
             
-            <button popovertarget="info2">How to play</button>
-            <div id="info2" popover>
+            <button popovertarget="info3">How to play</button>
+            <div id="info3" popover>
              <h1>Thor's Thunder:</h1>
             <p> Reaction time/hand eye coordination game wherein you must click the lighting bolts that appear on the screen before the timer runs out.   </p>
             <p> There are 4 modes of difficulty: Easy, Medium, Hard, and Nightmare.
@@ -64,8 +74,8 @@
 
     
             
-            </div>
         </div>
+    </div>
     </div>
     <a id="Back" href="Homepage.html"> Back to home page</a>
 </body>
@@ -74,8 +84,12 @@
 </footer>
 <style>
  @import url('https://fonts.googleapis.com/css?family=Press+Start+2P&display=swap');
+ 
 
-#BGI{
+
+
+
+ #BGI{
     background-size: cover;
     background-attachment: fixed;
     background-position: center;
@@ -87,12 +101,13 @@ div.card-holder{
     box-sizing: border-box;
     font-family: sans-serif;
     display: flex;
-    justify-content:center;
+    justify-content: center;
     flex-wrap: wrap;
-    gap:25px;
+    gap: 25px;
     margin-top:100px;
-
 }
+
+
 .card{
     width:325px;
     background-color:antiquewhite;
