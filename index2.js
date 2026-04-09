@@ -199,6 +199,8 @@ function checkAnswer(selectedOption) {
     <p> Maximum Score: 100,000,000</p>
     `;
   }
+  
+  
 
 // Add event listener to start the quiz when the start button is clicked
 document.getElementById("start-button").addEventListener("click", startQuiz);
