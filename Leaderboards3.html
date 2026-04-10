@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>Odin's Knowledge Leaderboard</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <link rel = "icon" type = "image/x-icon" href = "Images/favico.png">
+  <link rel="stylesheet" href="style4.css" />
+  <style>
+    /* leaderboard accent */
+    
+    .hero .title, .subtitle{ color: blue; }
+    .leaderboard .item { display:flex; justify-content:space-between; padding:0.5rem 0; border-bottom:1px solid #eee; }
+  </style>
+</head>
+<body class="has-background-light" id="BG" style="background-image: url('Images/Bridge.png');">
+
+  <section class="hero is-leader">
+    <div class="hero-body">
+      <div class="container">
+        <h1 class="title">Odins Rankings (For Thor's Thunder)</h1>
+        <h2 class="subtitle">Test your wit against fellow Warriors</h2>
+      </div>
+    </div>
+  </section>
+
+
+            <p id="boardStatus" class="mt-3"></p>
+          </div>
+        </div>
+
+        <div class="column is-half">
+          <div class="box">
+            <h3 class="title is-5">Top Runs</h3>
+            <div id="leaderboard" class="leaderboard"></div>
+            <p class="is-size-7 mt-3"></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <script>
+    const data = 'local_leaderboard_v1';
+    const MAX_ENTRIES = 20;
+    const leaderboardData = loadDATA();
+    function loadDATA(){
+        return JSON.parse(localStorage.getItem("result")) || [];
+    }
+
+    function loadBoard() {
+      const raw = localStorage.getItem("result");
+      return raw ? JSON.parse(raw) : [];
+    }
+
+    function saveBoard(arr) {
+      localStorage.setItem("result", JSON.stringify(arr));
+    }
+
+    function renderBoard() {
+      const container = document.getElementById('leaderboard');
+      const board = loadBoard();
+      if (board.length === 0) {
+        container.innerHTML = '<div class="notification is-warning">You have not been tested by Odins knowledge, step forward and try</div>';
+        return;
+      }
+
+      board.sort((a, b) => b.score - a.score); // sort ascending by moves (lower is better)
+      container.innerHTML = '';
+      board.forEach((entry, i) => {
+        const div = document.createElement('div');
+        div.className = 'item';
+        div.innerHTML = `<div><strong>${escapeHtml(entry.name)}</strong></div>  <div>${entry.score.toLocaleString("en-US")}</div>`;
+        container.appendChild(div);
+      });
+    }
+function escapeHtml(s) {
+      return String(s).replace(/[&<>"']/g, (m) => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[m]));
+    }
+
+
+      // sort ascending by time (lower is better)
+      
+      renderBoard();
+    ;
+
+    
+
+    document.addEventListener('DOMContentLoaded', renderBoard);
+    
+  </script>
+   <a href="Games.html" id="Back"> Back to navigation </a>
+
+ 
+</body>
+</html>
