@@ -10,7 +10,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Odin's Knowledge</title>
   <link rel="stylesheet" type="text/css" href="style2.css">
-  <link rel = "icon" type = "image/x-icon" href = "Images/pixil-frame-0.png">
+  <link rel = "icon" type = "image/x-icon" href = "Images/favico.png">
 </head>
 <body id="BG" style="background-image: url('Images/OdinEye2.png');">
   <div class="quiz-container">
@@ -158,7 +158,7 @@
 // Variables to track quiz state
 let currentQuestionIndex = 0;
 let score = 0;
-
+let username = null;
 
 // Function to start the quiz
 function startQuiz() {
@@ -215,7 +215,7 @@ function checkAnswer(selectedOption) {
 
   function endQuiz() {  
   // Stop the timer
-  let username=null;
+  
 while (!username){
   username=prompt("What is thy name, warrior?")
 }
@@ -230,21 +230,19 @@ while (!username){
     <p> Your Final Score is: ${score.toLocaleString("en-US")}</p>
     <p> Maximum Score: 100,000,000</p>
     `;
+
+    getdata();
   }
   function getdata(){
-    localStorage.setItem('score', score)
-    const info = JSON.parse(localStorage.getItem("data")) || [];
-     info.push(score);
-     localStorage.setItem("data", JSON.stringify(info));
-    
+   const obj = {
+    name: username,
+    score: score
+   }
 
-    localStorage.setItem('user_name', username)
-    const info2 = JSON.parse(localStorage.getItem("data")) || [];
-     info2.push(username);
-     localStorage.setItem("data", JSON.stringify(info2));
-  }
-
-  
+   const data = JSON.parse(localStorage.getItem("data")) || [];
+   data.push(obj);
+   localStorage.setItem("data", JSON.stringify(data));
+}
 
 // Add event listener to start the quiz when the start button is clicked
 document.getElementById("start-button").addEventListener("click", startQuiz);
