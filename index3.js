@@ -14,6 +14,7 @@ const gamemodes = {
 }
 let score = 0
 let selected_bug = {}
+let mode = 0;
 
 start_button.addEventListener('click', () => screens[0].classList.add('up'))
 
@@ -46,6 +47,17 @@ document.getElementById("Nightmare").addEventListener("click", () => {
 function startGame(gamemode) {
     seconds = gamemodes[gamemode].seconds
     setInterval(increaseTime, 1000)
+    if (gamemode === "Easy"){
+        mode ="Easy";    }
+    if (gamemode === "Medium"){
+        mode ="Medium";
+    }
+    if (gamemode === "Hard"){
+        mode ="Hard";
+    }
+    if (gamemode === "Nightmare"){
+        mode ="Nightmare";
+    }
 }
 
 function increaseTime() {
@@ -107,7 +119,7 @@ function increaseScore() {
 
 function stopGame(){
     while (!username3){
-      username3=prompt("What is thy name, warrior?")
+      username3=prompt("What is thy name, nigga?")
     }
     
     clearInterval(increaseTime);
@@ -119,15 +131,12 @@ function stopGame(){
 }
 
 function saveData() {
-    const obj = {
+    if (mode==="Easy"){
+         const obj = {
         name: username3,
-        score: score,
+        score1: score,
       
     };
-
-
-
-
    const data3 = JSON.parse(localStorage.getItem("result")) || [];
    exists = data3.some(entry => entry.name === username3);
 
@@ -138,4 +147,73 @@ function saveData() {
    else{
     
    }
-}
+    }
+      if (mode==="Medium"){
+         const obj = {
+        name: username3,
+        score2: score,
+      
+    };
+   const data4 = JSON.parse(localStorage.getItem("result")) || [];
+   exists = data4.some(entry => entry.name === username3);
+
+   if(!exists){
+       data4.push(obj);
+       localStorage.setItem("result", JSON.stringify(data4));
+   }
+   else{
+    
+   }
+    }
+      if (mode==="Hard"){
+         const obj = {
+        name: username3,
+        score3: score,
+      
+    };
+   const data5 = JSON.parse(localStorage.getItem("result")) || [];
+   exists = data5.some(entry => entry.name === username3);
+
+   if(!exists){
+       data5.push(obj);
+       localStorage.setItem("result", JSON.stringify(data5));
+   }
+   else{
+    
+   }
+    }
+      if (mode==="Nightmare"){
+         const obj = {
+        name: username3,
+        score4: score,
+      
+    };
+   const data6 = JSON.parse(localStorage.getItem("result")) || [];
+   exists = data6.some(entry => entry.name === username3);
+
+   if(!exists){
+       data6.push(obj);
+       localStorage.setItem("result", JSON.stringify(data6));
+   }
+   else{
+    
+   }
+    }
+      if (mode==="Easy"){
+         const obj = {
+        name: username3,
+        score1: score,
+      
+    };
+   const data3 = JSON.parse(localStorage.getItem("result")) || [];
+   exists = data3.some(entry => entry.name === username3);
+
+   if(!exists){
+       data3.push(obj);
+       localStorage.setItem("result", JSON.stringify(data3));
+   }
+   else{
+    
+   }
+    }
+   }

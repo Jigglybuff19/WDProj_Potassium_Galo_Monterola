@@ -19,6 +19,12 @@
     <div class="hero-body">
       <div class="container">
         <h1 class="title">Odins Rankings (For Thor's Thunder)</h1>
+          <label for="ChosenDifficulty">What mode:</label>
+         <select name="ChosenDifficulty" id="ChosenDifficulty" oninput="filterBoard()">
+        <option value="Easy">Easy</option>
+        <option value="Medium">Medium</option>
+        <option value="Hard">Hard</option>
+        <option value="Nightmare">Nightmare</option>
         <h2 class="subtitle">Test your wit against fellow Warriors</h2>
       </div>
     </div>
@@ -56,7 +62,38 @@
     function saveBoard(arr) {
       localStorage.setItem("result", JSON.stringify(arr));
     }
-
+    function filterBoard() {
+      let difficulty=0;
+       for(let key in result){
+        for(let i of result[key]){
+            if (i===score1){
+                difficulty="Easy";
+        }
+        if (i===score2){
+                difficulty="Medium";
+        }
+        if (i===score3){
+                difficulty="Hard";
+        }
+        if (i===score4){
+                difficulty="Nightmare";
+                
+       }
+       else{
+        difficulty=0;
+       }
+      }
+    }
+    let truescore=i;
+  }
+        const select = document.getElementById("ChosenDifficulty");
+        const board = document.getElementById("leaderboard");
+        const rows = board.getElementsByTagName("div");
+        filter = select.value;
+        let visibleCount = 0;
+        if (truescore===score1){
+          
+        }  
     function renderBoard() {
       const container = document.getElementById('leaderboard');
       const board = loadBoard();
@@ -70,7 +107,11 @@
       board.forEach((entry, i) => {
         const div = document.createElement('div');
         div.className = 'item';
-        div.innerHTML = `<div><strong>${escapeHtml(entry.name)}</strong></div>  <div>${entry.score.toLocaleString("en-US")}</div>`;
+      
+      
+        
+
+        div.innerHTML = `<div><strong>${escapeHtml(entry.name)}</strong></div>  <div>${entry.truescore}</div>`;
         container.appendChild(div);
       });
     }
@@ -94,3 +135,4 @@ function escapeHtml(s) {
  
 </body>
 </html>
+      
