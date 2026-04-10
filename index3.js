@@ -5,6 +5,7 @@ const game_container = document.getElementById('game-container')
 const timeElem = document.getElementById('time')
 const scoreElem = document.getElementById('score')
 const message = document.getElementById('message')
+let username3 = null;
 const gamemodes = {
     Easy: { seconds: 120 },
     Medium: { seconds: 90 },
@@ -105,13 +106,36 @@ function increaseScore() {
 }
 
 function stopGame(){
+    while (!username3){
+      username3=prompt("What is thy name, warrior?")
+    }
     
     clearInterval(increaseTime);
     clearTimeout(createBug);
     message.innerHTML = `Game Over! Your score is <span id="score">${score}</span>`;
     message.classList.add('visible');
     
-
+    saveData();
 }
 
+function saveData() {
+    const obj = {
+        name: username3,
+        score: score,
+      
+    };
 
+
+
+
+   const data3 = JSON.parse(localStorage.getItem("result")) || [];
+   exists = data3.some(entry => entry.name === username3);
+
+   if(!exists){
+       data3.push(obj);
+       localStorage.setItem("result", JSON.stringify(data3));
+   }
+   else{
+    
+   }
+}

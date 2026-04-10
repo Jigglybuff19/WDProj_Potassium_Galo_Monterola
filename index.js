@@ -3,6 +3,7 @@ const icons = [
 	"fa-heart", "fa-heart", "fa-star", "fa-star", "fa-moon", "fa-moon", "fa-bell", "fa-bell", "fa-car", "fa-car", "fa-cube", "fa-cube", "fa-leaf", "fa-leaf", "fa-smile", "fa-smile"
 ];
 
+let username2=null;
 const board = document.getElementById("game-board");
 const status = document.getElementById("status");
 const resetBtn = document.getElementById("reset-btn");
@@ -78,9 +79,13 @@ function checkForMatch(){
 }
 
 function checkGameOver(){
+	while (!username2){
+  username2=prompt("What is thy name, warrior?")
+}
 	if(matchedCards.length === icons.length){
 		status.innerText = "Congratulations! You Won!";
 	}
+	storeData();
 }
 
 function initGame(){
@@ -99,6 +104,17 @@ function initGame(){
 		board.appendChild(card);
 	});
 }
+function storeData(){
+   const obj = {
+    name: username2,
+    score: score
+   }
+
+   const data2 = JSON.parse(localStorage.getItem("info")) || [];
+   data2.push(obj);
+   localStorage.setItem("info", JSON.stringify(data2));
+}
+
 
 function resetGame(){
 	initGame();
