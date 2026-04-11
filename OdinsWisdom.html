@@ -217,7 +217,7 @@ function checkAnswer(selectedOption) {
   // Stop the timer
   
 while (!username){
-  username=prompt("What is thy name, nigga?")
+  username=prompt("What is thy name, Warrior?")
 }
   // Calculate the score percentage
   const scorePercentage = (score / quizQuestions.length) * 100;
@@ -238,10 +238,24 @@ while (!username){
     name: username,
     score: score
    }
+  
+    const data = JSON.parse(localStorage.getItem("data")) || [];
+     exists = data.some(entry => entry.name === username);
+    if(!exists){
+        data.push(obj);
+        localStorage.setItem("data", JSON.stringify(data));
+    }
 
-   const data = JSON.parse(localStorage.getItem("data")) || [];
-   data.push(obj);
-   localStorage.setItem("data", JSON.stringify(data));
+   
+   if(exists){
+       const existing = data.find(entry => entry.name === username);
+       if (existing) {
+            existing.score = score; 
+           localStorage.setItem("data", JSON.stringify(data));
+       }
+   }
+  
+   
 }
 
 // Add event listener to start the quiz when the start button is clicked

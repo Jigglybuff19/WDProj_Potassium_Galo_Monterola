@@ -119,7 +119,7 @@ function increaseScore() {
 
 function stopGame(){
     while (!username3){
-      username3=prompt("What is thy name, nigga?")
+      username3=prompt("What is thy name, Warrior?")
     }
     
     clearInterval(increaseTime);
@@ -137,12 +137,12 @@ function saveData() {
         score1: score,
       
     };
-   const data3 = JSON.parse(localStorage.getItem("result")) || [];
+   const data3 = JSON.parse(localStorage.getItem("result1")) || [];
    exists = data3.some(entry => entry.name === username3);
 
    if(!exists){
        data3.push(obj);
-       localStorage.setItem("result", JSON.stringify(data3));
+       localStorage.setItem("result1", JSON.stringify(data3));
    }
    else{
     
@@ -154,12 +154,12 @@ function saveData() {
         score2: score,
       
     };
-   const data4 = JSON.parse(localStorage.getItem("result")) || [];
+   const data4 = JSON.parse(localStorage.getItem("result2")) || [];
    exists = data4.some(entry => entry.name === username3);
 
    if(!exists){
        data4.push(obj);
-       localStorage.setItem("result", JSON.stringify(data4));
+       localStorage.setItem("result2", JSON.stringify(data4));
    }
    else{
     
@@ -171,12 +171,12 @@ function saveData() {
         score3: score,
       
     };
-   const data5 = JSON.parse(localStorage.getItem("result")) || [];
+   const data5 = JSON.parse(localStorage.getItem("result3")) || [];
    exists = data5.some(entry => entry.name === username3);
 
    if(!exists){
        data5.push(obj);
-       localStorage.setItem("result", JSON.stringify(data5));
+       localStorage.setItem("result3", JSON.stringify(data5));
    }
    else{
     
@@ -188,12 +188,12 @@ function saveData() {
         score4: score,
       
     };
-   const data6 = JSON.parse(localStorage.getItem("result")) || [];
+   const data6 = JSON.parse(localStorage.getItem("result4")) || [];
    exists = data6.some(entry => entry.name === username3);
 
    if(!exists){
        data6.push(obj);
-       localStorage.setItem("result", JSON.stringify(data6));
+       localStorage.setItem("result4", JSON.stringify(data6));
    }
    else{
     
