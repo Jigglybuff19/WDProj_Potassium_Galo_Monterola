@@ -2,7 +2,7 @@ The project proposal shall contain the following:
 
 A working website Title. The title should be short, catchy and would encapsulate what the website is about.  This title will be used on the website browser tab.
 A second title could be used to emphasize the importance of the website.
-A logo for your website should also be designed. To be used in every page of the website and on the web browser tab (the favicon/icon)
+A logo for your website should also be designed. To be used in every page of the website and on the web browser tab (favicon/icon)
 
 A short but comprehensive description of the website using only one or two paragraphs.  This will be used as part of the homepage content of your website.
 
