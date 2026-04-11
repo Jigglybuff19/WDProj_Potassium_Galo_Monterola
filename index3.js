@@ -144,9 +144,13 @@ function saveData() {
        data3.push(obj);
        localStorage.setItem("result1", JSON.stringify(data3));
    }
-   else{
-    
-   }
+    if(exists){
+            const existing = data3.find(entry => entry.name === username3);
+            if (existing) {
+             existing.score1 = score; 
+           localStorage.setItem("result1", JSON.stringify(data3));
+            }
+            }
     }
       if (mode==="Medium"){
          const obj = {
@@ -161,9 +165,13 @@ function saveData() {
        data4.push(obj);
        localStorage.setItem("result2", JSON.stringify(data4));
    }
-   else{
-    
-   }
+    if(exists){
+            const existing = data4.find(entry => entry.name === username3);
+            if (existing) {
+             existing.score2 = score; 
+           localStorage.setItem("result2", JSON.stringify(data4));
+            }
+            }
     }
       if (mode==="Hard"){
          const obj = {
@@ -178,9 +186,13 @@ function saveData() {
        data5.push(obj);
        localStorage.setItem("result3", JSON.stringify(data5));
    }
-   else{
-    
-   }
+   if(exists){
+            const existing = data5.find(entry => entry.name === username3);
+            if (existing) {
+             existing.score3 = score; 
+           localStorage.setItem("result3", JSON.stringify(data5));
+            }
+            }
     }
       if (mode==="Nightmare"){
          const obj = {
@@ -195,9 +207,13 @@ function saveData() {
        data6.push(obj);
        localStorage.setItem("result4", JSON.stringify(data6));
    }
-   else{
-    
-   }
+    if(exists){
+            const existing = data6.find(entry => entry.name === username3);
+            if (existing) {
+             existing.score4 = score; 
+           localStorage.setItem("result4", JSON.stringify(data6));
+            }
+            }
     }
       if (mode==="Easy"){
          const obj = {

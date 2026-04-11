@@ -86,7 +86,7 @@
         return;
       }
 
-      board.sort((a, b) => b.score - a.score); // sort ascending by moves (lower is better)
+      board.sort((a, b) => b.score4 - a.score4); // sort ascending by moves (lower is better)
       container.innerHTML = '';
       board.forEach((entry, i) => {
         const div = document.createElement('div');
