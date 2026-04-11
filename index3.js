@@ -119,7 +119,7 @@ function increaseScore() {
 
 function stopGame(){
     while (!username3){
-      username3=prompt("What is thy name, nigga?")
+      username3=prompt("What is thy name, Warrior?")
     }
     
     clearInterval(increaseTime);
@@ -137,16 +137,20 @@ function saveData() {
         score1: score,
       
     };
-   const data3 = JSON.parse(localStorage.getItem("result")) || [];
+   const data3 = JSON.parse(localStorage.getItem("result1")) || [];
    exists = data3.some(entry => entry.name === username3);
 
    if(!exists){
        data3.push(obj);
-       localStorage.setItem("result", JSON.stringify(data3));
+       localStorage.setItem("result1", JSON.stringify(data3));
    }
-   else{
-    
-   }
+    if(exists){
+            const existing = data3.find(entry => entry.name === username3);
+            if (existing) {
+             existing.score1 = score; 
+           localStorage.setItem("result1", JSON.stringify(data3));
+            }
+            }
     }
       if (mode==="Medium"){
          const obj = {
@@ -154,16 +158,20 @@ function saveData() {
         score2: score,
       
     };
-   const data4 = JSON.parse(localStorage.getItem("result")) || [];
+   const data4 = JSON.parse(localStorage.getItem("result2")) || [];
    exists = data4.some(entry => entry.name === username3);
 
    if(!exists){
        data4.push(obj);
-       localStorage.setItem("result", JSON.stringify(data4));
+       localStorage.setItem("result2", JSON.stringify(data4));
    }
-   else{
-    
-   }
+    if(exists){
+            const existing = data4.find(entry => entry.name === username3);
+            if (existing) {
+             existing.score2 = score; 
+           localStorage.setItem("result2", JSON.stringify(data4));
+            }
+            }
     }
       if (mode==="Hard"){
          const obj = {
@@ -171,16 +179,20 @@ function saveData() {
         score3: score,
       
     };
-   const data5 = JSON.parse(localStorage.getItem("result")) || [];
+   const data5 = JSON.parse(localStorage.getItem("result3")) || [];
    exists = data5.some(entry => entry.name === username3);
 
    if(!exists){
        data5.push(obj);
-       localStorage.setItem("result", JSON.stringify(data5));
+       localStorage.setItem("result3", JSON.stringify(data5));
    }
-   else{
-    
-   }
+   if(exists){
+            const existing = data5.find(entry => entry.name === username3);
+            if (existing) {
+             existing.score3 = score; 
+           localStorage.setItem("result3", JSON.stringify(data5));
+            }
+            }
     }
       if (mode==="Nightmare"){
          const obj = {
@@ -188,16 +200,20 @@ function saveData() {
         score4: score,
       
     };
-   const data6 = JSON.parse(localStorage.getItem("result")) || [];
+   const data6 = JSON.parse(localStorage.getItem("result4")) || [];
    exists = data6.some(entry => entry.name === username3);
 
    if(!exists){
        data6.push(obj);
-       localStorage.setItem("result", JSON.stringify(data6));
+       localStorage.setItem("result4", JSON.stringify(data6));
    }
-   else{
-    
-   }
+    if(exists){
+            const existing = data6.find(entry => entry.name === username3);
+            if (existing) {
+             existing.score4 = score; 
+           localStorage.setItem("result4", JSON.stringify(data6));
+            }
+            }
     }
       if (mode==="Easy"){
          const obj = {

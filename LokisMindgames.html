@@ -433,7 +433,7 @@
 
         function endGame() {
             while (!username2){
-            username2=prompt("What is thy name, warrior?")
+            username2=prompt("What is thy name, Warrior?")
                 }
             clearInterval(timerInterval);
             document.getElementById('finalMoves').textContent = moves;
@@ -450,9 +450,22 @@
                  }
 
              const data2 = JSON.parse(localStorage.getItem("info")) || [];
-            data2.push(obj);
-            localStorage.setItem("info", JSON.stringify(data2));
+              exists = data2.some(entry => entry.name === username2);
+              if(!exists){
+                 data2.push(obj);
+                 localStorage.setItem("info", JSON.stringify(data2));
+              }
+             
+             if(exists){
+            const existing = data2.find(entry => entry.name === username2);
+            if (existing) {
+             existing.moves = moves; 
+           localStorage.setItem("info", JSON.stringify(data2));
             }
+            }
+             
+        }
+    
 
 
         function newGame() {

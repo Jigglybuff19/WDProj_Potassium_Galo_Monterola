@@ -8,23 +8,34 @@
   <link rel="stylesheet" href="style4.css" />
   <style>
     /* leaderboard accent */
-    
+    #Pathway{
+  font-family: 'Press Start 2P', sans-serif;
+  color: white;
+  top: 700px;
+}
+#Pathway:hover{
+  color:blue;
+  background-color: transparent;
+  text-decoration: underline;
+}
     .hero .title, .subtitle{ color: blue; }
     .leaderboard .item { display:flex; justify-content:space-between; padding:0.5rem 0; border-bottom:1px solid #eee; }
   </style>
 </head>
 <body class="has-background-light" id="BG" style="background-image: url('Images/Bridge.png');">
+  <header>
+    <nav>
+      <a href="Leaderboards3.1.html">Easy </a>
+      <a href="Leaderboards3.2.html">Medium</a>
+      <a href="Leaderboards3.3.html">Hard</a>
+      <a href="Leaderboards3.4.html">Nightmare</a>
+       </nav>
+  </header>
 
   <section class="hero is-leader">
     <div class="hero-body">
       <div class="container">
         <h1 class="title">Odins Rankings (For Thor's Thunder)</h1>
-          <label for="ChosenDifficulty">What mode:</label>
-         <select name="ChosenDifficulty" id="ChosenDifficulty" oninput="filterBoard()">
-        <option value="Easy">Easy</option>
-        <option value="Medium">Medium</option>
-        <option value="Hard">Hard</option>
-        <option value="Nightmare">Nightmare</option>
         <h2 class="subtitle">Test your wit against fellow Warriors</h2>
       </div>
     </div>
@@ -34,13 +45,17 @@
             <p id="boardStatus" class="mt-3"></p>
           </div>
         </div>
-
+        
         <div class="column is-half">
           <div class="box">
-            <h3 class="title is-5">Top Runs</h3>
+            <h3 class="title is-5"></h3>
             <div id="leaderboard" class="leaderboard"></div>
             <p class="is-size-7 mt-3"></p>
+
+            
+       
           </div>
+          
         </div>
       </div>
     </div>
@@ -51,68 +66,45 @@
     const MAX_ENTRIES = 20;
     const leaderboardData = loadDATA();
     function loadDATA(){
-        return JSON.parse(localStorage.getItem("result")) || [];
+        return JSON.parse(localStorage.getItem("result3")) || [];
     }
 
     function loadBoard() {
-      const raw = localStorage.getItem("result");
+      const raw = localStorage.getItem("result3");
       return raw ? JSON.parse(raw) : [];
     }
 
     function saveBoard(arr) {
-      localStorage.setItem("result", JSON.stringify(arr));
+      localStorage.setItem("result3", JSON.stringify(arr));
     }
-    function filterBoard() {
-      let difficulty=0;
-       for(let key in result){
-        for(let i of result[key]){
-            if (i===score1){
-                difficulty="Easy";
-        }
-        if (i===score2){
-                difficulty="Medium";
-        }
-        if (i===score3){
-                difficulty="Hard";
-        }
-        if (i===score4){
-                difficulty="Nightmare";
-                
-       }
-       else{
-        difficulty=0;
-       }
-      }
-    }
-    let truescore=i;
-  }
-        const select = document.getElementById("ChosenDifficulty");
-        const board = document.getElementById("leaderboard");
-        const rows = board.getElementsByTagName("div");
-        filter = select.value;
-        let visibleCount = 0;
-        if (truescore===score1){
-          
-        }  
+   
     function renderBoard() {
       const container = document.getElementById('leaderboard');
       const board = loadBoard();
       if (board.length === 0) {
-        container.innerHTML = '<div class="notification is-warning">You have not been tested by Odins knowledge, step forward and try</div>';
+        container.innerHTML = '<div class="notification is-warning">You have not been tested by Thor\'s Thunder, step forward and try</div>';
         return;
       }
-
-      board.sort((a, b) => b.score - a.score); // sort ascending by moves (lower is better)
+      
+      board.sort((a, b) => b.score3 - a.score3); // sort descending by moves (higher is better)
       container.innerHTML = '';
       board.forEach((entry, i) => {
         const div = document.createElement('div');
         div.className = 'item';
-      
-      
-        
-
-        div.innerHTML = `<div><strong>${escapeHtml(entry.name)}</strong></div>  <div>${entry.truescore}</div>`;
+        div.innerHTML = `<div><strong>${escapeHtml(entry.name)}</strong></div>  <div>${entry.score3}</div>`;
         container.appendChild(div);
+        const deleteBtn = document.createElement("button");
+                deleteBtn.innerText = "Delete";
+                deleteBtn.className = "delete-btn";
+                deleteBtn.addEventListener("click", () => {
+                    const index = board.indexOf(entry);
+                    if (index > -1) {
+                        board.splice(index, 1);
+                        saveBoard(board);
+                        renderBoard();
+                    }
+                });
+                div.appendChild(deleteBtn);
       });
     }
 function escapeHtml(s) {
@@ -130,9 +122,10 @@ function escapeHtml(s) {
     document.addEventListener('DOMContentLoaded', renderBoard);
     
   </script>
+  <a href="Pathway.html" id="Pathway"> Back to Difficulty </a>\
+  <br>
    <a href="Games.html" id="Back"> Back to navigation </a>
 
  
 </body>
 </html>
-      

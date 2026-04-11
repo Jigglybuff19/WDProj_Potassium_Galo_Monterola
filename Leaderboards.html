@@ -73,6 +73,19 @@
         div.className = 'item';
         div.innerHTML = `<div><strong>${escapeHtml(entry.name)}</strong></div> <div>${entry.score.toLocaleString("en-US")}</div>`;
         container.appendChild(div);
+
+        const deleteBtn = document.createElement("button");
+                deleteBtn.innerText = "Delete";
+                deleteBtn.className = "delete-btn";
+                deleteBtn.addEventListener("click", () => {
+                    const index = board.indexOf(entry);
+                    if (index > -1) {
+                        board.splice(index, 1);
+                        saveBoard(board);
+                        renderBoard();
+                    }
+                });
+                div.appendChild(deleteBtn);
       });
     }
 function escapeHtml(s) {

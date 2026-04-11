@@ -1,0 +1,109 @@
+@import url('https://fonts.googleapis.com/css?family=Press+Start+2P&display=swap');
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: black;
+  color: #fff;
+  font-family: 'Press Start 2P', sans-serif;
+  height: 100vh;
+  text-align: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+a {
+  color: #fff;
+}
+
+h1 {
+  line-height: 1.4;
+}
+
+
+
+.button {
+  border: 0;
+  background-color: #fff;
+  color: #516dff;
+  padding: 15px 20px;
+  font-family: inherit;
+  cursor: pointer;
+}
+
+.button:hover {
+  opacity: 0.9;
+}
+
+.button:focus {
+  outline: 0;
+}
+
+.screen {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  width: 100vw;
+  transition: margin 0.5s ease-out;
+}
+
+.screen.up {
+  margin-top: -100vh;
+}
+
+.bug-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  list-style-type: none;
+  padding: 0;
+}
+
+.bug-list li {
+  margin: 10px;
+}
+
+.choose-bug-button {
+  background-color: transparent;
+  border: 2px solid #fff;
+  color: #fff;
+  cursor: pointer;
+  font-family: inherit;
+  width: 150px;
+  height: 150px;
+}
+
+.choose-bug-button:hover {
+  background-color: #fff;
+  color: #516dff;
+}
+
+.choose-bug-button:active {
+  background-color: rgba(255, 255, 255, 0.7);
+}
+
+.choose-bug-button img {
+  width: 100px;
+  height: 100px;
+  object-fit: contain;
+}
+
+a{
+  position:absolute;
+  bottom: 20px;
+  right: 20px;
+}
+#Back{
+  font-family: 'Press Start 2P', sans-serif;
+  color: white;
+}
+#Back:hover{
+  color:blue;
+  background-color: transparent;
+  text-decoration: underline;
+}
+
