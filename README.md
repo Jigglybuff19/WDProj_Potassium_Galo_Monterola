@@ -46,7 +46,7 @@ Outline:
     - Our logo, Mjolnir will be in the middle of the screen waiting to be clicked
     - Footer with copyright notices, social media handles, and a link to all our references
     - Hovering over the Mjonlir button will show a text box saying "Are you worthy?". Clicking the button will take you to the second webpage with the list of games. 
-    - Score goal: , 299,792,458, 
+    - Score goal: , 299,792,458 
     - All the webpages of the games will have a link back to the homepage and the navigation bar.
 
     2nd Webpage: 

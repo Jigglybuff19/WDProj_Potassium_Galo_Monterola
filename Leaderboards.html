@@ -21,6 +21,7 @@
       <div class="container">
         <h1 class="title">Odins Rankings (For Odin's Knowledge)</h1>
         <h2 class="subtitle">Test your wit against fellow Warriors</h2>
+        <button onclick=CheckScore()>Prove thy worthiness</button>
       </div>
     </div>
   </section>
@@ -97,9 +98,31 @@ function escapeHtml(s) {
       
       renderBoard();
     ;
-
-    
-
+    function CheckScore(data){
+      let highest = 0;
+      let value1=0;
+      let value2=0;
+      for (key in data){
+        for (i of data[key]){
+          value2=value1;
+          value1= i;
+          if (value1>value2){
+            highest=value1;
+          }
+          else{
+            highest=value2;
+          }
+      }
+      
+      }
+  
+    }
+    if(highest>=76000000){
+        alert("Nice one nigga");
+      }
+      else{
+        alert("You suck nigga")
+  }
     document.addEventListener('DOMContentLoaded', renderBoard);
   </script>
    <a href="Games.html" id="Back"> Back to navigation </a>
