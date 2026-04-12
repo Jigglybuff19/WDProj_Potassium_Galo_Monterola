@@ -20,6 +20,9 @@
       <div class="container">
         <h1 class="title">Odins Rankings (For Loki's Mindgames)</h1>
         <h2 class="subtitle">Test your wit against fellow Warriors</h2>
+        <h2 class="target">Target: Moves are less than 13 </h2>
+        <br>
+        <button onclick=CheckScore(leaderboardData)>Prove thy worthiness</button>
       </div>
     </div>
   </section>
@@ -96,6 +99,18 @@ function escapeHtml(s) {
       
       renderBoard();
     ;
+
+    function CheckScore(data){
+    
+    let lowest = data[0].moves;
+
+          if(lowest<=13){
+        alert("You have passed, Brother");
+      }
+      else{
+          alert("You must try again, Brother")
+      }
+        }
 
     document.addEventListener('DOMContentLoaded', renderBoard);
   </script>

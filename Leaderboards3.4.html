@@ -37,6 +37,9 @@
       <div class="container">
         <h1 class="title">Odins Rankings (For Thor's Thunder)</h1>
         <h2 class="subtitle">Test your wit against fellow Warriors</h2>
+        <h2 class="target">Target: Score is greater than or equal to 50 </h2>
+        <br>
+        <button onclick=CheckScore(leaderboardData)>Prove thy worthiness</button>
       </div>
     </div>
   </section>
@@ -116,6 +119,16 @@ function escapeHtml(s) {
       
       renderBoard();
     ;
+    function CheckScore(result4){
+      let highest = result4[0].score4;
+
+          if(highest>=50){
+        alert("You have passed, Brother");
+      }
+      else{
+          alert("You must try again, Brother")
+      }
+    }
 
     
 

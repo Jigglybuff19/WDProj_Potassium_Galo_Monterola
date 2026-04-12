@@ -1,9 +1,13 @@
  @import url('https://fonts.googleapis.com/css?family=Press+Start+2P&display=swap');
- .title, .subtitle, .title.is-5, .label, #submitRun, #clearBoard, label{
+ .title, .subtitle,  .label, #submitRun, #clearBoard, label, .target{
     font-family: 'Press Start 2P', sans-serif;
-    color: black;
+    color: blue;
  }
 
+ .title.is-5 {
+   color: black;
+ }
+ 
  p, .leaderboard {
     font-family: 'Press Start 2P', sans-serif;
     font-size: small;
