@@ -4,6 +4,11 @@
     color: blue;
  }
 
+ button {
+  font-family: 'Press Start 2P', sans-serif;
+  background-color: aquamarine;
+ }
+
  .title.is-5 {
    color: black;
  }
