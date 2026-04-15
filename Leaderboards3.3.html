@@ -121,7 +121,9 @@ function escapeHtml(s) {
     ;
 
     function CheckScore(result3){
-      let highest = result3[0].score3;
+      let highest = result3.reduce(function(max, entry) {
+          return entry.score3 > max ? entry.score3 : max;
+      }, 0);
 
           if(highest>=95){
         alert("You have passed, Brother");

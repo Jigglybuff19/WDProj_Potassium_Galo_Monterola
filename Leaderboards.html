@@ -90,6 +90,7 @@
                 });
                 div.appendChild(deleteBtn);
       });
+
     }
 function escapeHtml(s) {
       return String(s).replace(/[&<>"']/g, (m) => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[m]));
@@ -101,8 +102,10 @@ function escapeHtml(s) {
       renderBoard();
     ;
     function CheckScore(data){
-    
-    let highest = data[0].score;
+
+    let highest = data.reduce(function(max, entry) {
+        return entry.score > max ? entry.score : max;
+    }, 0);
 
           if(highest>=76000000){
         alert("You have passed, Brother");

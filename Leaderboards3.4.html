@@ -120,7 +120,9 @@ function escapeHtml(s) {
       renderBoard();
     ;
     function CheckScore(result4){
-      let highest = result4[0].score4;
+      let highest = result4.reduce(function(max, entry) {
+          return entry.score4 > max ? entry.score4 : max;
+      }, 0);
 
           if(highest>=50){
         alert("You have passed, Brother");

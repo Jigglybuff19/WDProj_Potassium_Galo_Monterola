@@ -105,8 +105,10 @@ function escapeHtml(s) {
     ;
 
     function CheckScore(data){
-    
-    let lowest = data[0].moves;
+
+    let lowest = data.reduce(function(min, entry) {
+        return entry.moves < min ? entry.moves : min;
+    }, Infinity);
 
           if(lowest<=13){
         alert("You have passed, Brother");
