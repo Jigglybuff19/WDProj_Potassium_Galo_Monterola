@@ -18,15 +18,43 @@
 <div class="rain"></div>
 
 <h1>
-<p id = "HomeText"> Are You Worthy?</p>
- <a id = "BGI" target="_blank" href ="Games.html">
-     <img height ="400" src="Images/pixil-frame-0_7.png" ></a>
+<p id = "HomeText"> </p>
+<img height ="350" id = "Prove" src="Images/Ascension.webp" onclick="location.href='W27.html'">
+
+<p> You need to make a decision...</p>
+<p> Sacrifice your Worthiness for Ragnarok to never happen (Restart)</p>
+<p> or </p>
+<p> Continue the fight and to see your worthiness (Continue)</p>
+<br>
+<br>
+<p> Click to see decisions</p>
 </h1>
 </body>
 
 <style>
  @import url('https://fonts.googleapis.com/css?family=Press+Start+2P&display=swap');
   
+ 
+#Prove{
+      display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
+    z-index: 2;
+    bottom: 200px;
+    transform: translateY(29%);
+    transform: rotate(180deg);
+    
+}
+
+button{
+    justify-content: center;
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
+   
+}
 
  *,
 *::before,
@@ -41,7 +69,9 @@ body {
     overflow: hidden;  
 }
 
-
+p{
+    text-align: center;;
+}
 
 
 
@@ -108,10 +138,7 @@ body {
      
     }
 
-    #BGI:hover{
-        transform: scale(1.05);
-        transition: all 1.0s ease;
-    }
+  
     
     ul {
         color: white;

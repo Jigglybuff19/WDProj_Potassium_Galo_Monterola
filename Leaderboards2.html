@@ -24,7 +24,7 @@
       <div class="container">
         <h1 class="title">Odins Rankings (For Loki's Mindgames)</h1>
         <h2 class="subtitle">Test your wit against fellow Warriors</h2>
-        <h2 class="target">Target: Moves are less than 13 </h2>
+        <h2 class="target">Target: Moves are less than 15 </h2>
         <br>
         <button id="check" onclick=CheckScore(leaderboardData)>Prove thy worthiness</button>
       </div>
@@ -110,7 +110,7 @@ function escapeHtml(s) {
         return entry.moves < min ? entry.moves : min;
     }, Infinity);
 
-          if(lowest<=13){
+          if(lowest<=15){
         alert("You have passed, Brother");
       }
       else{

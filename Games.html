@@ -78,9 +78,11 @@
         </div>
 
     </div>
+
     </div>
     <a id="Back" href="Homepage.html"> Back to home page</a>
 
+    <input type="button" id="prove-worthiness" onclick="Worthiness()" value="Prove Worthiness">
     <footer>
 
     <p>Contact us Below:</p>
@@ -97,10 +99,45 @@
 </footer>
 
 </body>
+<script>
+    
 
+function Worthiness() {
+
+    const data = JSON.parse(localStorage.getItem("info")) || [];
+    const info = JSON.parse(localStorage.getItem("data")) || [];
+    const result1 = JSON.parse(localStorage.getItem("result1")) || [];
+    const result2 = JSON.parse(localStorage.getItem("result2")) || [];
+    const result3 = JSON.parse(localStorage.getItem("result3")) || [];
+    const result4 = JSON.parse(localStorage.getItem("result4")) || [];
+
+    const highest = data.length ? Math.max(...data.map(entry => entry.score)) : 0;
+    const lowest = data.length ? Math.min(...data.map(entry => entry.moves)) : Infinity;
+    const highest2 = result1.length  ? Math.max(...result1.map(entry => entry.score1)) : 0;
+    const highest3 = result2.length  ? Math.max(...result2.map(entry => entry.score2)) : 0;
+    const highest4 = result3.length  ? Math.max(...result3.map(entry => entry.score3)) : 0;
+    const highest5 = result4.length ? Math.max(...result4.map(entry => entry.score4)) : 0;
+
+  
+
+    if (
+        highest >= 7600000 &&
+        lowest <= 15 &&
+        highest2 >= 125 &&
+        highest3 >= 110 &&
+        highest4 >= 85 &&
+        highest5 >= 45
+    ) {
+        location.href = "Worthy.html";
+    } else {
+        alert("You are not yet worthy, Brother.");
+    }
+}
+
+
+</script>
 <style>
- @import url('https://fonts.googleapis.com/css?family=Press+Start+2P&display=swap');
- 
+    @import url('https://fonts.googleapis.com/css?family=Press+Start+2P&display=swap');
 
 ul{
     list-style-type: none;

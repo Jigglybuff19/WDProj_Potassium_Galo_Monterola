@@ -11,22 +11,34 @@
 <link rel = "icon" type = "image/x-icon" href = "Images/favico.png">
 <body id = "backgroundImg">
 <head>
-   <canvas id="canvas"></canvas>
-  <button id="generate-btn"></button>
-
-<div id="darken"></div>
-<div class="rain"></div>
+   
 
 <h1>
-<p id = "HomeText"> Are You Worthy?</p>
- <a id = "BGI" target="_blank" href ="Games.html">
-     <img height ="400" src="Images/pixil-frame-0_7.png" ></a>
+<p id = "HomeText"> SHOW ME YOUR STRENGTH</p>
+<img height ="350" id = "Prove" src="Images/Prove.webp" onclick="location.href='W14.html'">
+
+
+
 </h1>
 </body>
 
 <style>
  @import url('https://fonts.googleapis.com/css?family=Press+Start+2P&display=swap');
   
+ 
+#Prove{
+      display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
+    z-index: 2;
+    bottom: 200px;
+    transform: translateY(29%);
+    transform: rotate(85deg);
+    
+}
+
 
  *,
 *::before,
@@ -108,10 +120,7 @@ body {
      
     }
 
-    #BGI:hover{
-        transform: scale(1.05);
-        transition: all 1.0s ease;
-    }
+  
     
     ul {
         color: white;

@@ -11,25 +11,18 @@
 <link rel = "icon" type = "image/x-icon" href = "Images/favico.png">
 <body id = "backgroundImg">
 <head>
-   <canvas id="canvas"></canvas>
-  <button id="generate-btn"></button>
-
-<div id="darken"></div>
-<div class="rain"></div>
+   
 
 <h1>
-<p id = "HomeText"> You are worthy</p>
-    <img height ="200" id = "Prove" src="Images/Prove.webp" >
-     <img height ="500" id="Rock" src="Images/Rock.webp" >
+<p id = "HomeText"> Pick the Hammer up by clicking</p>
+ <a id = "BGI" target="_blank" href ="Worthy2.html">
+     <img height ="400" src="Images/pixil-frame-0_7.png" ></a>
 </h1>
 </body>
-
 
 <style>
  @import url('https://fonts.googleapis.com/css?family=Press+Start+2P&display=swap');
   
-
-
 
  *,
 *::before,
@@ -42,24 +35,6 @@
 html,
 body {
     overflow: hidden;  
-}
-
-#Prove{
-    display: flex;
-    margin-left: auto;
-    margin-right: auto;
-  
-    top: 1000px;
-}
-#Rock {
-    
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-left: auto;
-    margin-right: auto;
-    z-index: 2;
-    bottom: 200px;
 }
 
 
@@ -94,6 +69,7 @@ body {
     position: absolute;
     z-index: 2;
     pointer-events: none;
+    width: 100%;
 }
 
 #generate-btn{
@@ -128,10 +104,7 @@ body {
      
     }
 
-    #BGI:hover{
-        transform: scale(1.05);
-        transition: all 1.0s ease;
-    }
+  
     
     ul {
         color: white;
@@ -247,7 +220,7 @@ generateLighting = () => {
 
             setTimeout(() => {
                 document.querySelector("#darken").style.backdropFilter = "brightness(0.9) grayscale(0.1)";
-                if(i = strokes) pen.clearRect(0, 0, canvas.width, canvas.height)
+                if(i === strokes) pen.clearRect(0, 0, canvas.width, canvas.height)
                 isLightning = false;
             }, getRndInteger(1200, 1500));
         };
